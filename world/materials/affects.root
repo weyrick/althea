@@ -1,0 +1,42 @@
+
+#
+# ways in which a material can be affected
+#
+
+affects {
+
+	# crushing is a damage cause by squeezing or large falling objects
+	name="crushing";
+
+	# jabs of sharp items	
+	name="piercing";
+
+	# slashing cuts	
+	name="slashing";
+
+	# beating, usualy by blunt item. also if item is dropped.
+	name="pounding";
+
+	# can affect materials such as leather, paper
+	name="disease";
+
+	name="magic";
+
+	# how fast does time wear this object down
+	name="time";
+
+	# includes dragon fire
+	name="magical fire";
+
+	# transmutation includes polymorph, petrification
+	name="transmutation";
+
+	# self explanitory
+	name="water";
+	name="acid";
+	name="wind";
+	name="fire";
+	name="frost";
+	name="electricity";
+
+}

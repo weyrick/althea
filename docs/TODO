@@ -1,0 +1,24 @@
+
+       TODO
+---------------------
+
+- how to do database access, multiple layers? (ie, low level DB requests, and DB utils class for getMessage, etc?)
+- find and fix mem leak
+
+
+sectors
+-------
+- how to link
+
+
+events
+------
+- time based events. ie, event will fire at a specified universal time. also way
+- to remove from system by object, in case of cancellation
+
+client
+-------
+- client owns pointer to creature. what to do when they disconnect on purpose? not on purpose? when
+  to free memory
+
+

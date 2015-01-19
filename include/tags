@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5	//
+ASNCLIENT_H	snclient.h	27;"	d
+SNCLIENT_IN_BUFFER_SIZE	snclient.h	31;"	d
+SNCLIENT_OUT_BUFFER_SIZE	snclient.h	30;"	d
+SNclient	snclient.h	/^	SNclient(Server * serv, Socket * sock)$/;"	f	class:SNclient
+SNclient	snclient.h	/^class SNclient : public aClient {$/;"	c	inherits:aClient
+clearInputNewline	snclient.h	/^	void clearInputNewline(void) { inputNewline = false; }$/;"	f	class:SNclient
+disconnect	snclient.h	/^	void disconnect(void) {$/;"	f	class:SNclient
+flush	snclient.h	/^	void flush(void) {$/;"	f	class:SNclient
+flushIn	snclient.h	/^	void flushIn(void) { inBuffer.clear();}$/;"	f	class:SNclient
+flushOut	snclient.h	/^	void flushOut(void) {$/;"	f	class:SNclient
+getCreature	snclient.h	/^	aCreature * getCreature(void) { return myCreature; }$/;"	f	class:SNclient
+getDescriptor	snclient.h	/^	int getDescriptor(void) $/;"	f	class:SNclient
+getHash	snclient.h	/^	String getHash(void) { return myHash;}$/;"	f	class:SNclient
+getHostName	snclient.h	/^	String getHostName(void) {if (mySocket) return mySocket->getHostName(); else return ""; }$/;"	f	class:SNclient
+getInBuffer	snclient.h	/^	String getInBuffer(void) { return inBuffer;}$/;"	f	class:SNclient
+getNetState	snclient.h	/^	unsigned int getNetState(void) { return networkState; }$/;"	f	class:SNclient
+getPassword	snclient.h	/^	String getPassword(void) { return passWord; }$/;"	f	class:SNclient
+getPlayerName	snclient.h	/^	String getPlayerName(void) { return playerName; }$/;"	f	class:SNclient
+hasInput	snclient.h	/^	bool hasInput(void) { return (inBuffer.length()) ? true : false; }$/;"	f	class:SNclient
+inBuffer	snclient.h	/^	String inBuffer;		 		\/\/ clients input buffer $/;"	m	class:SNclient
+inputNewline	snclient.h	/^	bool inputNewline;   			\/\/ if they just pressed enter at the prompt$/;"	m	class:SNclient
+isInputNewline	snclient.h	/^	bool isInputNewline(void) { return inputNewline; }$/;"	f	class:SNclient
+myCreature	snclient.h	/^	aCreature * myCreature;   			\/\/ the unique ID of the creature object we are controlling$/;"	m	class:SNclient
+myHash	snclient.h	/^	String myHash;					\/\/ key that will be used to hash this client$/;"	m	class:SNclient
+myServer	snclient.h	/^	Server * myServer;    			\/\/ the server that's handling us	$/;"	m	class:SNclient
+mySocket	snclient.h	/^	Socket * mySocket;	  			\/\/ socket the client is connected to $/;"	m	class:SNclient
+networkState	snclient.h	/^	unsigned int networkState;   	\/\/ what network state is this client in?$/;"	m	class:SNclient
+outBuffer	snclient.h	/^	String outBuffer;		 		\/\/ clients output buffer$/;"	m	class:SNclient
+passWord	snclient.h	/^	String passWord;				\/\/ the players password $/;"	m	class:SNclient
+playerName	snclient.h	/^	String playerName;				\/\/ the players name$/;"	m	class:SNclient
+say	snclient.h	/^	void say(String text) {$/;"	f	class:SNclient
+setCreature	snclient.h	/^	void setCreature(aCreature * c) { myCreature = c; }$/;"	f	class:SNclient
+setEcho	snclient.h	/^	void setEcho(bool val) { (val) ? mySocket->wontEcho() : mySocket->willEcho(); }$/;"	f	class:SNclient
+setNetState	snclient.h	/^	void setNetState(unsigned int newState) { networkState = newState; }$/;"	f	class:SNclient
+setPassWord	snclient.h	/^	void setPassWord(String pw) { passWord = pw; }$/;"	f	class:SNclient
+setPlayerName	snclient.h	/^	void setPlayerName(String name) { playerName = name; }$/;"	f	class:SNclient
+worldMessage	snclient.h	/^	void worldMessage(String message) {$/;"	f	class:SNclient
+writeln	snclient.h	/^	void writeln(String text) {$/;"	f	class:SNclient
+~SNclient	snclient.h	/^	~SNclient(void) {$/;"	f	class:SNclient

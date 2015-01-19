@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Outline>
+  <Node title="dbEngine" text="maintain a database connection for read/write access" todo="no"/>
+  <Node title="universalTimeClass" text="maintain time for the world" todo="no"/>
+  <Node title="WorldEngine" text="maintainer of objects and map" todo="no">
+    <Node title="AdminEngine" text="maintain an interface for GM administration" todo="no"/>
+    <Node title="EventEngine" text="maintain list of events" todo="no"/>
+    <Node title="MapEngine" text="maintain map file" todo="no"/>
+    <Node title="ObjectEngine" text="maintainer of worldly objects" todo="no">
+      <Node title="AObject" text="Althea Object" todo="no">
+        <Node title="Creature" text="any living object." todo="no">
+          <Node title="(class heirarchy)" todo="no">
+            <Node title="PC" text="a player character" todo="no"/>
+            <Node title="NPC" text="a non-player character" todo="no"/>
+          </Node>
+          <Node title="(member data)" todo="no">
+            <Node title="CreatureSkills" text="maintains a list of skills for this creature" todo="no">
+              <Node title="baseSkill" text="a single skill" todo="no"/>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </Node>
+  </Node>
+  <Node title="IOEngine" text="maintainer of input/output to clients" todo="no">
+    <Node title="IOinterface" text="a &quot;server&quot; interface. maintains a &quot;Client&quot; list" todo="no">
+      <Node title="(class hierarchy)" todo="no">
+        <Node title="SNinterface" text="a &quot;simple network&quot; server interface (telnet)" todo="no">
+          <Node title="(member data)" todo="no">
+            <Node title="SNclient" text="simple network client - telnet interface" todo="no"/>
+          </Node>
+        </Node>
+      </Node>
+      <Node title="(member data)" todo="no">
+        <Node title="Client" text="a client connecting to the world." todo="no"/>
+      </Node>
+    </Node>
+  </Node>
+</Outline>

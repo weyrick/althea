@@ -1,0 +1,36 @@
+
+
+** MATERIALS **
+
+- when a material is "used" (offensively in melee), IT is checked against being "pounded". 
+  but when an material needs to check to receive damage, it checks based on the type of "attack", ie, water, fire,
+  acid, crushing, slashing, etc
+
+- material resistance is 0-255, 0 being not resistant at all, 255 being impeneterable or unaffected
+  most materials will have resistance in range 0-100
+  base resistance check is 10d10
+  if resistance of material is >= resistance roll, no damage occurs
+  if resistance of material is < resistance roll, 1 point of damage per 3 points of difference occurs
+
+- if the damage level before a check for ANY particular affect is >= that affects highest damage adjective level,
+  the damage check will be modified heavily towards the negative end to make the check fail (the material (and thus,
+  object) is in effect unusable, unless it's repaired).
+  
+- damage roll gets applied once to each material component of an object
+
+- resistance modifiers include: distance an object falls, strength of blow, damage of blow, current state of
+  objects material (ie, rusted or cracked)
+  
+# damage adjectives are done by 0-255 list
+# they will be concatenated when the material is examined, based on current damage the state tells us
+# if there is none listed for a state based on the current damage, it is skipped
+# 0, no damage, is "brand new"
+# 255, max damage, is broken and unusable
+
+- resistance to time is based on an arbitraty value 0-255. the value is how many hours it takes for a material state
+  to increase by one damage point
+  
+- if there are any other adjectives to be used, besides "time", then time adjective is ommitted.
+
+  
+

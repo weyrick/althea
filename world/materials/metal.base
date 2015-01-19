@@ -1,0 +1,156 @@
+#
+# base type for all metals
+#
+
+material {
+
+	baseName="metal";	# base name. can't be instantiated, must be subclassed
+	
+	# the rest can be overridden by the subclass
+	repairable=yes;		# metal can be repaired
+	
+	# the affect list comes from affect.root
+	# if an affect is listed in affect.root but isn't listed here, the material is
+	# unaffected by that affect (ie, resistance of 255)
+
+	# dont confuse resistance with damage adjectives! they are different (arbitrary) values
+
+	# damage adjectives are done by 0-255 list
+	# they will be concatenated when the material is examined, based on current damage the state tells us
+	# if there is none listed for a state based on the current damage, it is skipped
+	# 0, no damage, is "brand new"
+	# 255, max damage, is broken and unusable
+
+	affect {
+	
+		name="crushing";
+		resistance=70;
+		repairable=yes;
+		# damage adjectives
+		adj=40,"ragged";
+		adj=120,"warped";
+		adj=190,"cracked";
+		
+	}
+
+	affect {
+	
+		name="piercing";
+		resistance=50;
+		repairable=yes;
+		# damage adjectives
+		adj=5,"nicked";
+		adj=25,"notched";
+		adj=50,"pierced";
+		adj=75,"covered with small holes";
+		adj=85,"engulfed by gaping holes";
+		adj=100,"swiss cheese";
+				
+	}
+
+	affect {
+	
+		name="slashing";
+		resistance=70;
+		repairable=yes;
+		# damage adjectives
+		adj=5,"scuffed";
+		adj=25,"scratched";
+		adj=40,"slit";
+		adj=60,"slashed";
+		adj=80,"gashed";
+		adj=110,"cleaved into pieces";
+		
+	}
+
+	affect {
+	
+		name="pounding";
+		resistance=40;
+		repairable=yes;
+		# damage adjectives
+		adj=5,"pimpled";
+		adj=10,"stippled";
+		adj=25,"dented";
+		adj=90,"pounded";
+		adj=130,"pulped";
+		adj=150,"beat out of shape";
+		
+	}
+	
+	# metals have no inherant resistance to magic
+	affect {
+		name="magic";
+		resistance=0;
+		repairable=no;
+		# damage adjectives
+		# none for magic
+	}
+		
+	# resistance to time
+	# keep 0 damage adjective here
+	# resistance is how many hours it takes to increase 1 damage point in state
+	affect {
+		name="time";
+		resistance=24;
+		repairable=yes;
+		# damage adjectives
+		# since resistance is 24 hours, the number here is how many days before changing
+		adj=0,"glistening";
+		adj=1,"gleaming";
+		adj=3,"burnished";
+		adj=5,"polished";
+		adj=10,"lusterless";
+		adj=12,"dull";
+		adj=40,"dusty";
+		adj=80,"ragged";
+		adj=150,"corrugated";
+		adj=170,"encrusted";
+	}
+	
+	affect {
+		name="magical fire";
+		resistance=25;
+		repairable=no;
+		# damage adjectives
+		adj=1,"permanently blackened";
+		adj=20,"blistered and warped beyond repair";
+		adj=40,"crispy and easily crumbled";
+		adj=60,"scorched to squishy lump";
+		adj=90,"charred into gelatinous blob";
+		adj=130,"broiled to an unrecognizable heap";
+		adj=160,"roasted into dough-like mass";
+		adj=190,"permanently molten and glowing red hot";
+	}
+
+
+	# chance to survive transmutation
+	affect {
+		name="transmutation";
+		resistance=50;
+		repairable=no;
+		# damage adjectives
+		# none
+	}
+	
+	affect {
+		name="water";
+		resistance=10;
+		repairable=yes;
+		# damage adjectives
+		adj=12,"moist";
+		adj=40,"damp";
+		adj=80,"soaked";
+		adj=200,"rusted";
+		adj=230,"rusted and pitted";
+		adj=255,"rusted and cracked";
+	}
+	
+		name="acid";
+		name="fire";
+		name="electricity";
+		name="frost";
+
+	}
+
+}
